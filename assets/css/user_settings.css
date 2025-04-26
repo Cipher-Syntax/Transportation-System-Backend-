@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+SK:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins, Arial;
+    background-color: #fff;
+    margin: 0;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    width: 1109px;
+    height: 900px;
+}
+.settings-container {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 500px;
+    background-color: #d0d0dd;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    top: 100px;
+    position: absolute;
+    left: 40%;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+    width: fit-content;
+}
+
+.settings-option {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: #1E8449;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.settings-container i{
+    position: absolute;
+    right: 20%;
+}
+
+button:hover {
+    background-color: #0FD763;
+}
+footer{
+    font-family: Poppins, Arial;
+    width: 100%;
+    background-color: #1E8449;
+    color: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 720px){
+    .settings-container{
+        left: 30px;
+    }
+    .settings-container i{
+        right: 24%;
+    }
+    footer{
+        margin-top: 900px;
+    }
+}

@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+SK:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins, Arial;
+    background-color: #fff;
+    margin: 0;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    width: 1109px;
+    height: 800px;
+}
+.booking-container{
+    width: 500px;
+    height: 830px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.text-logo{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1E8449;
+    padding-bottom: 10px;
+}
+.flex{
+    display: flex;
+}
+.line-logo{
+    height: 2px;
+    width: 90%;
+    background-color: #1E8449;
+    margin-left: auto;
+    margin-right: auto;
+}
+.location,
+.destination,
+.contact,
+.pickup
+{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+.input-form{
+    width: 90%;
+}
+.input-form input, select{
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #1E8449;
+    outline: none;
+    width: 460px;
+}
+.input-form label{
+    color: #1E8449;
+    font-size: 18px;
+    font-weight: bold;
+}
+.map-container{
+    margin-top: 50px;
+    width: 460px;
+    margin-left: 20px;
+}
+#map {
+    width: 460px;
+    height: 200px;
+    border-radius: 20px;
+}
+.price{
+    background-color: #0FD763;
+    margin-left: 20px;
+    padding-left: 20px;
+    width: 460px;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.btn-links button{
+    background-color: #1E8449;
+    margin-left: 20px;
+    padding-left: 20px;
+    width: 460px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.history-booking-container{
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.text-logo{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1E8449;
+    padding-bottom: 10px;
+}
+.line-logo{
+    height: 3px;
+    width: 90%;
+    background-color: #1E8449;
+    margin-left: auto;
+    margin-right: auto;
+}
+.history-container{
+    width: 450px;
+    height: 300px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.booking-date{
+    display: flex;
+    padding: 20px;
+    column-gap: 70px;
+    text-align: center;
+}
+.date{
+    max-width: fit-content;
+}
+.confirm-payment{
+    background-color: #0FD763;
+    color: #fff;
+    font-weight: bold;
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.pickup-history{
+    padding: 20px;
+}
+.pickup-location,
+.pickup-destination,
+.pickup-price,
+.pickup-contact
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+}
+.pickup-text-location,
+.pickup-text-destination,
+.pickup-text-price,
+.pickup-text-contact
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+.value-location{
+    font-size: 10px;
+}
+.value-destination{
+    font-size: 10px;
+}
+.value-price{
+    font-size: 10px;
+}
+.value-contact{
+    font-size: 10px;
+}
+.pickup-driver{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+}
+.pickup-driver img{
+    height: 50px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.cancel-rides{
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: -80px;
+    right: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.cancel-container{
+    width: 450px;
+    height: 300px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+#cancel-rides{
+    width: 200px;
+    padding-top: 6px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #EA1818;
+    margin-left: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+.no-rides{
+    padding-left: 20px;
+}
+.pending-status{
+    background-color: #FFE082;
+    color: #FF8F00;
+    font-weight: bold;
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cancelled-payment{
+    background-color: #EA1818;
+    color: #fff;
+    font-weight: bold;
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    font-family: Poppins, Arial;
+    width: 100%;
+    background-color: #1E8449;
+    color: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 720px) {
+    .container{
+        left: 0;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .booking-container{
+        width: 450px;
+        margin-right: 225px;
+    }
+    .input-form{
+        width: 440px;
+    }
+    .input-form input, select{
+        width: 410px;
+    }
+    .map-container{
+        width: 410px;
+    }
+    #map{
+        width: 410px;
+        z-index: 0;
+    }
+    .price{
+        width: 410px;
+    }
+    .btn-links button{
+        width: 410px;
+    }
+    .cancel-rides{
+        width: 450px;
+        height: 400px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -1060px;
+        right: 225px;
+    }
+    .cancel-container{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 720px) {
+    
+    .container{
+        left: 0;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .history-booking-container{
+        width: 440px;
+        margin-right: 225px;
+    }
+    .history-container{
+        width: 400px;
+    }
+
+    footer{
+        margin-top: 1900px;
+    }
+}

@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+SK:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins, Arial;
+    background-color: #fff;
+    margin: 0;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    width: 1109px;
+    height: 900px;
+    /* background-color: antiquewhite; */
+}
+.first-flex{
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    column-gap: 10px;
+}
+.offline-btn{
+    padding: 5px;
+    background-color: #d0d0dd;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+.online-btn{
+    padding: 5px;
+    background-color: #0FD763;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.busy-btn{
+    padding: 5px;
+    background-color: #FF8F00;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.driver-choice.selected{
+    background-color: #033c9e !important;
+}
+.second-flex{
+    width: 615px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    column-gap: 10px;
+}
+.todays-earnings,
+.todays-quota,
+.overall-rating
+{
+    background-color: #0FD763;
+    color: #1E8449;
+    padding: 10px;
+    text-align: center;
+    height: 70px;
+    border-radius: 20px;
+}
+.earnings,
+.quota,
+.o-rating
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.earnings-text
+.quota-text,
+.overall-rating-text
+{
+    font-size: 12px;
+}
+.new-ride-request-container{
+    width: 500px;
+    height: 550px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.text-logo{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1E8449;
+    padding-bottom: 10px;
+}
+.line-logo{
+    height: 3px;
+    width: 90%;
+    background-color: #1E8449;
+    margin-left: auto;
+    margin-right: auto;
+}
+.request-container{
+    margin-top: 30px;
+}
+.new-request-text{
+    display: flex;
+    column-gap: 220px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+}
+.pickup-history{
+    padding: 20px;
+}
+.pickup-location,
+.pickup-destination,
+.pickup-contact
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+}
+.pickup-text-location,
+.pickup-text-destination,
+.pickup-text-contact
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+.new-ride-value-location{
+    font-size: 10px;
+
+}
+.new-ride-value-destination{
+    font-size: 10px;
+}
+.new-ride-value-contact{
+    font-size: 10px;
+}
+.map-container{
+    width: 460px;
+    margin-left: 20px;
+}
+#map{
+    width: 460px;
+    height: 200px;
+    border-radius: 20px;
+}
+.price{
+    background-color: #0FD763;
+    margin-left: 20px;
+    padding-left: 20px;
+    width: 460px;
+    padding: 6px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.btn-links{
+    display: flex;
+    width: 440px;
+}
+.btn-links button{
+    margin-left: 20px;
+    padding-left: 20px;
+    width: 450px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+}
+#accept{
+    background-color: #1E8449;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+#decline{
+    background-color: #EA1818;
+    position: relative;
+    left: 40px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+.current-container{
+    width: 450px;
+    height: 300px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.current-trip{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1E8449;
+    padding-bottom: 10px;
+}
+.pickup-history{
+    padding: 20px;
+}
+.pickup-location,
+.pickup-destination,
+.pickup-price
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+}
+.pickup-text-location,
+.pickup-text-destination,
+.pickup-text-price
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+.current-ride-value-location{
+    font-size: 10px;
+}
+.current-ride-value-destination{
+    font-size: 10px;
+}
+.current-ride-value-price{
+    font-size: 10px;
+}
+.confirm-btn button{
+    margin-top: 10px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #7AC020;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.current-text-logo{
+    font-size: 14px;
+}
+.current-trip-text{
+    margin-top: 20px;
+    display: flex;
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.current-line-logo{
+    height: 1px;
+    width: 90%;
+    background-color: #1E8449;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pending-payment{
+    padding: 1px;
+    border-radius: 10px;
+    background-color: #FFE082;
+    color: #FF8F00;
+    width: 200px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    right: 20px;
+}
+.flex{
+    display: flex;
+}
+
+.history-booking-container{
+    width: 500px;
+    height: 830px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.text-logo{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1E8449;
+    padding-bottom: 10px;
+}
+.line-logo{
+    height: 3px;
+    width: 90%;
+    background-color: #1E8449;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.todays-completed-trip{
+    width: 450px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    padding-bottom: 50px;
+    position: absolute;
+    bottom: 50px;
+}
+.no-trip{
+    padding-left: 20px;
+}
+.history-container{
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+.booking-date{
+    display: flex;
+    padding: 20px;
+    column-gap: 70px;
+    text-align: center;
+}
+.date{
+    max-width: fit-content;
+}
+.confirm-payment{
+    background-color: #0FD763;
+    color: #fff;
+    font-weight: bold;
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pickup-history{
+    padding: 20px;
+}
+.pickup-location,
+.pickup-destination,
+.pickup-price
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+}
+.pickup-text-location,
+.pickup-text-destination,
+.pickup-text-price
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+.history-ride-value-location{
+    font-size: 10px;
+}
+.history-ride-value-destination{
+    font-size: 10px;
+}
+.history-ride-value-price{
+    font-size: 10px;
+}
+.todays-trip{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1E8449;
+    padding-bottom: 10px;
+}
+footer{
+    font-family: Poppins, Arial;
+    width: 100%;
+    background-color: #1E8449;
+    color: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 720px) {
+    .container{
+        left: 0;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .new-ride-request-container{
+        width: 450px;
+        position: relative;
+        right: 100px;
+    }
+    .btn-links{
+        width: 420px;
+    }
+    .first-flex{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        right: 100px;
+    }
+    .second-flex{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        right: 100px;
+        width: 450px;
+    }
+    .earnings,
+    .quota,
+    .o-rating{
+        font-size: 18px;
+    }
+    .earnings-text,
+    .quota-text,
+    .overall-rating-text
+    {
+        font-size: 8px;
+        margin-top: 10px;
+    }
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .map-container{
+        width: 410px;
+    }
+    #map{
+        width: 410px;
+        z-index: 0;
+    }
+    .btn-links form{
+        width: 420px;
+    }
+    .price{
+        width: 400px;
+    }
+    #decline{
+        left: 0px;
+    }
+    .current-container{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 30px;
+        right: 100px;
+        width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .todays-completed-trip{
+        top: 250px;
+        position: absolute;
+        width: 440px;
+        height: 600px;
+    }
+
+    footer{
+        margin-top: 1800px;
+        font-family: Poppins, Arial;
+        width: 100%;
+        background-color: #1E8449;
+        color: #fff;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+    }
+}

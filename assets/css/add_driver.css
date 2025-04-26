@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+SK:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --container: #fff;
+    --side-bar: #1E8449;
+    --button: #1E8449;
+    --text: #fff;
+}
+html{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*{
+    width: 100%;
+    margin: 0;
+}
+body{
+    font-family: Poppins, Arial;
+    background-color: #fff;
+    margin: 0;
+}
+.container{
+    display: flex;
+}
+.sidebar{
+    width: 300px;
+    height: 630px;
+    background-color: var(--side-bar);
+    color: var(--text);
+    text-align: center;
+}
+.logo{
+    margin-top: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-left: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.items i{
+    font-size: 24px;
+}
+.items a{
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px;
+}
+.items:hover{
+    text-decoration: underline;
+}
+.dashboard-fields{
+    width: calc(100% - 300px);
+}
+.dashboard-header{
+    height: 110px;
+    color: var(--side-bar);
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+.dashboard-text{
+    color: var(--side-bar);
+    padding-top: 30px;
+    padding-left: 20px;
+    width: fit-content;
+}
+.btn-links{
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 600px;
+    column-gap: 20px;
+}
+.btn-links button{
+    width: 80px;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.back{
+    color: var(--button);
+    background-color: var(--container);
+    border: 1px solid #1E8449;
+}
+.edit{
+    background-color: var(--button);
+    color: var(--text);
+    border: 1px solid #1E8449;
+}
+.driver-details{
+    width: 98%;
+    height: 500px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.driver-profile{
+    padding: 20px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+.driver-profile img{
+    height: 150px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.driver-name{
+    font-size: 30px;
+}
+.driver-ratings{
+    display: flex;
+    font-size: 14px;
+}
+.rating{
+    color: #FFC107;
+}
+.information{
+    width: 96%;
+    height: 450px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+.personal-information{
+    width: 47%;
+    height: 350px;
+    /* border: 1px solid #d0d0d0; */
+}
+.driver-information{
+    /* border: 1px solid #d0d0d0; */
+    width: 47%;
+    height: 350px;
+}
+.information-logo{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.firstname,
+.driver-license
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+#firstname,
+#lastname,
+#email,
+#password,
+#license-number,
+#driver-note,
+#driver-rating,
+#contact
+{
+    width: 80%;
+    /* border: transparent; */
+    outline: none;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+.lastname,
+.email,
+.password,
+.driver-note,
+.driver-rating,
+.contact
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+#add{
+    padding: 10px;
+    width: 250px;
+    background-color: #1E8449;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    float: right;
+    margin-right: 50px;
+    position: relative;
+    bottom: 380px;
+    cursor: pointer;
+}
