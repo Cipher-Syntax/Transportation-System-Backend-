@@ -126,7 +126,7 @@ body{
     margin-top: 50px;
     cursor: pointer;
     position: absolute;
-    top: 450px;
+    top: 480px;
 }
 .scroll-rider.selected {
     background-color: #A8C4F5 !important;
