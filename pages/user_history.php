@@ -87,8 +87,10 @@
             <?php endforeach; ?>
         </div>
     </div>
+    
     <footer>
-        <p>&copy; 2025 GoMove Transportation System - Zamboanga City</p>
+        <p>&copy; 2025 GoMove</p>
+        <a href="../pages/about_us.php" class="about">About Us</a>
     </footer>
 </body>
 </html>
