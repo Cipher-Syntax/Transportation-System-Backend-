@@ -103,11 +103,11 @@
                 <a href="../pages/driver_settings.php">Settings</a>
             </div>
 
-            <div class="logout-field">
+            <!-- <div class="logout-field">
                 <i class='bx bx-log-out' ></i>
                 <a href="../pages/logout.php">Logout</a>
                 <img src="<?php echo $driver_data['driver_profile'] ?>" alt="user-pic">
-            </div>
+            </div> -->
             
         </nav>
     </div>

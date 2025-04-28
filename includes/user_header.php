@@ -104,11 +104,11 @@
                 <a href="../pages/user_settings.php">Settings</a>
             </div>
 
-            <div class="logout-field">
+            <!-- <div class="logout-field">
                 <i class='bx bx-log-out' ></i>
                 <a href="../pages/logout.php">Logout</a>
                 <img src="<?php echo $user_data['user_profile'] ?>" alt="user-pic">
-            </div>
+            </div> -->
             
         </nav>
     </div>
