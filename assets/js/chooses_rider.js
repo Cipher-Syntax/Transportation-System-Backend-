@@ -101,21 +101,21 @@ document.querySelectorAll('.scroll-rider').forEach((rider) => {
         driverName = rider.getAttribute('data-name');
         driverRating = rider.getAttribute('data-rating');
         driverNotes = rider.getAttribute('data-notes');
-        driverSeats = rider.getAttribute('data-seats');
+        driverLicense = rider.getAttribute('data-license');
         driverImage = rider.getAttribute('data-image');
 
         console.log(driverId);
         console.log(driverName);
         console.log(driverRating);
         console.log(driverNotes);
-        console.log(driverSeats);
+        console.log(driverLicense);
         console.log(driverImage);
 
         document.getElementById('selectedDriverInput').value = driverId;
         document.getElementById('driver-name').innerHTML = driverName;
         document.getElementById('driver-rating').innerHTML = driverRating;
         document.getElementById('driver-notes').innerHTML = driverNotes;
-        document.getElementById('driver-seats').innerHTML = driverSeats;
+        document.getElementById('driver-license').innerHTML = "License Number: " + driverLicense;
         document.getElementById('driver-img').src = driverImage;
     });
 });
@@ -136,7 +136,7 @@ document.getElementById('confirmRiderBtn').addEventListener('click', function ()
             driver_name: driverName,
             driver_rating: driverRating,
             driver_notes: driverNotes,
-            driver_seats: driverSeats,
+            driver_license: driverLicense,
             driver_image: driverImage
         })
     })

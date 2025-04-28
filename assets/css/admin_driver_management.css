@@ -181,3 +181,19 @@ tbody tr:nth-child(even){
     background-color: var(--button) !important;
     color: var(--text);
 }
+#add-driver-btn{
+    width: 200px;
+    float: right;
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--container);
+    background-color: var(--button);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+}
+#add-driver-btn:hover{
+    background-color: #31b96a;
+}
