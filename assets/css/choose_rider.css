@@ -209,6 +209,14 @@ footer{
     position: absolute;
     bottom: -550px;
 }
+.about{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+.about:hover{
+    text-decoration: underline;
+}
 
 @media screen and (max-width: 720px) {
     footer{
