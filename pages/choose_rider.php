@@ -74,7 +74,8 @@
                     </div>
                 <?php endforeach; ?>
 
-
+            </div>
+            
             <div class="select-rider">
                 <button type="button">Select Rider</button>
             </div>
