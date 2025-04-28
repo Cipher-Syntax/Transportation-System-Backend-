@@ -23,7 +23,6 @@
     // $total_records = $count_result['total'];
     // $total_pages = ceil($total_records / $records_per_page);
 
-    // Main query with pagination
     $query = "SELECT 
         rides.ride_id, 
         users.firstname AS user_firstname, 
