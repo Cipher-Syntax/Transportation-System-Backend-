@@ -67,7 +67,7 @@
 
 </head>
 <body>
-<div class="container">
+    <div class="container">
         <div class="sidebar">
             <h1 class="logo">Gomove Admin</h1>
 
@@ -91,7 +91,6 @@
                 <a href="../admin/admin_settings.php">Settings</a>
             </div>
         </div>
-
 
         <div class="dashboard-fields">
             <div class="dashboard-header">

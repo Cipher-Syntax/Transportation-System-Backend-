@@ -55,12 +55,14 @@
                 <i class='bx bx-cog' ></i>
                 <a href="../admin/admin_settings.php">Settings</a>
             </div>
+
         </div>
 
 
         <div class="dashboard-fields">
             <div class="dashboard-header">
                 <h1 class="dashboard-text">Driver Management</h1>
+                <button type="button" id="add-driver-btn">Add Driver</button>
             </div>
 
             <div class="recent-rides">
@@ -120,6 +122,10 @@
             });
             
         });
+        
+        document.getElementById('add-driver-btn').addEventListener('click', () => {
+            window.location.href = "../admin/add_driver.php";
+        });
 
         document.getElementById('edit').addEventListener('click', () => {
             window.location.href = "../admin/admin_action.php";
@@ -128,6 +134,7 @@
         document.getElementById('view').addEventListener('click', () => {
             window.location.href = "../admin/admin_action.php";
         });
+
     </script>
 </body>
 </html>

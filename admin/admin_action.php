@@ -132,7 +132,7 @@
                         <p class="driver-name"><?php echo $driver_details['firstname'] . ' ' . $driver_details['lastname']; ?></p>
                         <div class="driver-ratings">
                             <p class="driver-id"><?php echo "Driver Id: " . $driver_details['id'] ?></p>
-                            <p class="rating"><?php echo $driver_details['ratings'] . "★"; ?></p>
+                            <p class="rating"><?php echo $driver_details['ratings']; ?></p>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
 
                         <div class="driver-rating">
                             <label for="driver-rating">Driver Rating</label>
-                            <input type="text" name="driver-rating" value="<?php echo $driver_details['ratings'] . "★"; ?>" id="driver-rating" readonly>
+                            <input type="text" name="driver-rating" value="<?php echo $driver_details['ratings']; ?>" id="driver-rating" readonly>
                         </div>
 
                     </div>

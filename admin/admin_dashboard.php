@@ -90,6 +90,7 @@
                 <i class='bx bx-cog' ></i>
                 <a href="../admin/admin_settings.php">Settings</a>
             </div>
+
         </div>
 
 
