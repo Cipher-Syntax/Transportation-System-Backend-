@@ -58,7 +58,7 @@
                         data-name="<?= $driver['firstname'] . ' ' . $driver['lastname']; ?>" 
                         data-rating="<?= $driver['ratings']; ?>" 
                         data-notes="<?= htmlspecialchars($driver['driver_notes']); ?>" 
-                        data-seats="<?= $driver['car_seats']; ?>" 
+                        data-license="<?= $driver['license_number']; ?>" 
                         data-image="<?= $driver['driver_profile']; ?>">
                         
                         <div class="left-side">
@@ -97,7 +97,7 @@
                     </div>
 
                     <div class="confirm-rider">
-                        <p value="" id="driver-seats"></p>
+                        <p value="" id="driver-license"></p>
                         <input type="hidden" id="selectedDriverInput">
                         <button id="confirmRiderBtn" name="confirm">Confirm</button>
                     </div>
