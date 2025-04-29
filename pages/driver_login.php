@@ -67,15 +67,15 @@
                     <button type="submit" name="login-btn" id="login-btn">Login</button>
                 </form>
 
-                <i class='bx bxs-user-circle' id="user_login"></i>
+                <!-- <i class='bx bxs-user-circle' id="user_login"></i> -->
             </div>
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         document.getElementById('user_login').addEventListener('click', () => {
             window.location.href = "../pages/login.php";
         })
-    </script>
+    </script> -->
 </body>
 </html>

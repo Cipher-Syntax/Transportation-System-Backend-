@@ -77,16 +77,16 @@
                             <a href="../pages/create_account.php">Create Account</a>
                     </div>
 
-                    <i class='bx bx-key' id="driver_login"></i>
+                    <!-- <i class='bx bx-key' id="driver_login"></i> -->
                 </form>
             </div>
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         document.getElementById('driver_login').addEventListener('click', () => {
             window.location.href = "../pages/driver_login.php";
         })
-    </script>
+    </script> -->
 </body>
 </html>
