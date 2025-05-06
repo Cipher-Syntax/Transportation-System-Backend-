@@ -9,19 +9,12 @@
     $driver_data = adminCheckLogin($conn);
     $driver_id = $driver_data['id'];
 
-    // $records_per_page = 5;
-    // $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-    // if ($current_page < 1) $current_page = 1;
-    // $offset = ($current_page - 1) * $records_per_page;
-
     $count_query = "SELECT COUNT(*) as total FROM rides 
                     JOIN users ON users.id = rides.passenger 
                     JOIN drivers ON drivers.id = rides.driver";
     $count_stmt = $conn->prepare($count_query);
     $count_stmt->execute();
     $count_result = $count_stmt->fetch(PDO::FETCH_ASSOC);
-    // $total_records = $count_result['total'];
-    // $total_pages = ceil($total_records / $records_per_page);
 
     $query = "SELECT 
         rides.ride_id, 
@@ -36,19 +29,11 @@
         FROM rides 
         JOIN users ON users.id = rides.passenger 
         JOIN drivers ON drivers.id = rides.driver
-        -- LIMIT :offset, :records_per_page
     ";
     
     $stmt = $conn->prepare($query);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
-    // $start_record = $offset + 1;
-    // $end_record = min($offset + $records_per_page, $total_records);
-    
-    // $pagination_start = 1;
-    // $pagination_end = 5;
 ?>
 
 
