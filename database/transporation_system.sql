@@ -18,7 +18,7 @@ CREATE TABLE drivers (
     email VARCHAR(150) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     contact_no VARCHAR(11) NOT NULL,
-    license_number VARCHAR(255), NOT NULL
+    license_number VARCHAR(255) NOT NULL,
     driver_notes VARCHAR(999) NOT NULL,
     ratings VARCHAR(255) NOT NULL,
     driver_profile VARCHAR(255) NOT NULL,
