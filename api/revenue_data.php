@@ -26,7 +26,6 @@
         ];
     }
 
-    // Set the header and output the JSON-encoded data
     header('Content-Type: application/json');
     echo json_encode($data);
 ?>

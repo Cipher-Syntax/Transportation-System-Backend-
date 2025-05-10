@@ -13,14 +13,14 @@
 
         $location = $data['location'] ?? '';
         $destination = $data['destination'] ?? '';
-        $contact = $data['contact'] ?? '';
         $pickup = $data['pickup'] ?? '';
+        $contact = $data['contact'] ?? '';
         $price = $data['price'] ?? 0;
 
         $_SESSION['location'] = $location;
         $_SESSION['destination'] = $destination;
-        $_SESSION['contact'] = $contact;
         $_SESSION['pickup'] = $pickup;
+        $_SESSION['contact'] = $contact;
         $_SESSION['price'] = $price;
 
         echo json_encode(["status" => "success", "redirect" => "../pages/choose_rider.php"]);
