@@ -1,5 +1,5 @@
 <?php
-    
+
     $database = new Database();
     $conn = $database->getConnection();
     $user_data = checkUserLogin($conn);
@@ -17,21 +17,23 @@
 
     if (isset($_SESSION['booking_success'])) {
         $message = $_SESSION['booking_success'];
-        echo "<script>
-            window.onload = function() {
-                alert('$message');
-            };
-        </script>";
+        // echo "<script>
+        //     window.onload = function() {
+        //         alert('$message');
+        //     };
+        // </script>";
+        include("../templates/successfullBooking.php");
         unset($_SESSION['booking_success']);
     }
 
     if (isset($_SESSION['cancel_message'])) {
         $message = $_SESSION['cancel_message'];
-        echo "<script>
-            window.onload = function() {
-                alert('$message');
-            };
-        </script>";
+        // echo "<script>
+        //     window.onload = function() {
+        //         alert('$message');
+        //     };
+        // </script>";
+        include("../templates/cancelBooking.php");
         unset($_SESSION['cancel_message']);
     }
 
@@ -42,16 +44,18 @@
     $ride = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($ride && $ride['status'] == 'Cancelled' && $ride['user_notified'] == 0) {
-    echo "<script>
-        window.onload = function() {
-            alert('Cancelled Request');
-        };
-    </script>";
+        // echo "<script>
+        //     window.onload = function() {
+        //         alert('Rider declined your request');
+        //     };
+        // </script>";
+        include("../templates/riderDeclinedRequest.php");
+        
 
-    // Mark user as notified
-    $update = "UPDATE rides SET user_notified = 1 WHERE ride_id = ?";
-    $stmtUpdate = $conn->prepare($update);
-    $stmtUpdate->execute([$ride['ride_id']]);
+        // Mark user as notified
+        $update = "UPDATE rides SET user_notified = 1 WHERE ride_id = ?";
+        $stmtUpdate = $conn->prepare($update);
+        $stmtUpdate->execute([$ride['ride_id']]);
     }
 
     $user_id = $user_data['id'];
@@ -81,6 +85,7 @@
                 r.location,
                 r.destination,
                 drivers.contact_no,
+                r.pickup_time,
                 r.amount,
                 r.created_at,
                 r.status

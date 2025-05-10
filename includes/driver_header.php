@@ -66,10 +66,9 @@
                 <!-- <span> > </span> -->
             </a>
 
-            <a href="../pages/logout.php" class="sub-menu-links logout" id="logout">
+            <a href="../pages/logout.php?redirect=../pages/driver_login.php" class="sub-menu-links logout" id="logout">
                 <i class='bx bx-log-out'></i>
                 <p>Logout</p>
-                <!-- <span> > </span> -->
             </a>
         </div>
     </div>
