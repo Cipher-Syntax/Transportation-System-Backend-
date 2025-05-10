@@ -43,6 +43,7 @@ CREATE TABLE rides (
     location VARCHAR(255) NOT NULL,
     destination VARCHAR(255) NOT NULL,
     user_contact VARCHAR(11) NOT NULL,
+    pickup_time VARCHAR(255) NOT NULL,
     amount VARCHAR(255) NOT NULL,
     status ENUM('Completed', 'Pending', 'Active', 'Cancelled'),
     user_notified TINYINT(1) DEFAULT 0,
