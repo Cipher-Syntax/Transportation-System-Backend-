@@ -64,6 +64,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Settings</title>
     <link rel="stylesheet" href="../assets/css/admin_settings.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -89,6 +90,11 @@
             <div class="items">
                 <i class='bx bx-cog' ></i>
                 <a href="../admin/admin_settings.php">Settings</a>
+            </div>
+
+            <div class="items">
+                <i class='bx bx-log-out'></i>
+                <a href="../pages/logout.php?redirect=../admin/admin_login.php">Logout</a>
             </div>
         </div>
 

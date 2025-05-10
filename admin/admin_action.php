@@ -112,6 +112,11 @@
                 <i class='bx bx-cog' ></i>
                 <a href="../admin/admin_settings.php">Settings</a>
             </div>
+
+            <div class="items">
+                <i class='bx bx-log-out'></i>
+                <a href="../pages/logout.php?redirect=../admin/admin_login.php">Logout</a>
+            </div>
         </div>
 
 

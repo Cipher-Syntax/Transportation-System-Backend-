@@ -22,7 +22,7 @@
         rides.status 
         FROM rides 
         JOIN users ON users.id = rides.passenger 
-        JOIN drivers ON drivers.id = rides.driver LIMIT 5
+        JOIN drivers ON drivers.id = rides.driver LIMIT 4
     ";
     $stmt = $conn->prepare($query);
     $stmt->execute();
@@ -89,6 +89,11 @@
             <div class="items">
                 <i class='bx bx-cog' ></i>
                 <a href="../admin/admin_settings.php">Settings</a>
+            </div>
+
+            <div class="items">
+                <i class='bx bx-log-out'></i>
+                <a href="../pages/logout.php?redirect=../admin/admin_login.php">Logout</a>
             </div>
 
         </div>
