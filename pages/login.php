@@ -24,7 +24,8 @@
                         exit;
                     }
                     else{
-                        echo "<script>alert('Invalid email or password');</script>";
+                        // echo "<script>alert('Invalid email or password');</script>";
+                        include("../templates/invalidPassword.php");
                     }
                 }
                 else{

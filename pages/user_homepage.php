@@ -157,6 +157,11 @@
                             <p class="pickup-text-contact">Contact No:</p>
                             <p class="value-contact"><?= $pending_ride['contact_no']; ?></p>
                         </div>
+
+                        <div class="pickup-time">
+                            <p class="pickup-text-time">Pickup Time:</p>
+                            <p class="value-time"><?= $pending_ride['pickup_time']; ?></p>
+                        </div>
                     </div>
 
                     <form method="POST">

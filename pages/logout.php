@@ -1,8 +1,12 @@
 <?php
     session_start();
+
+    $redirectPage = $_GET['redirect'] ?? 'login.php';
+
     session_unset();
     session_destroy();
-    
-    header("Location: login.php");
-    die();
+    session_reset();
+
+    header("Location: $redirectPage");
+    exit();
 ?>

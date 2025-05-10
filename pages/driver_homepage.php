@@ -9,8 +9,6 @@
     // QUERIES
     require_once("../includes/driver_homepage_query.php");
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -83,6 +81,11 @@
                             <div class="pickup-contact">
                                 <p class="pickup-text-contact">Contact:</p>
                                 <p class="new-ride-value-contact"><?= htmlspecialchars($new_request['user_contact']) ?></p>
+                            </div>
+
+                            <div class="pickup-time">
+                                <p class="pickup-text-time">Pickup Time:</p>
+                                <p class="new-ride-value-time"><?= htmlspecialchars($new_request['pickup_time']) ?></p>
                             </div>
                         </div>
 
