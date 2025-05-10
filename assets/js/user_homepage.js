@@ -15,8 +15,8 @@ document.querySelector('.input-form').addEventListener('submit', function (e) {
       body: JSON.stringify({
           location: location,
           destination: destination,
-          contact: contact,
           pickup: pickup,
+          contact: contact,
           price: price
       })
   })

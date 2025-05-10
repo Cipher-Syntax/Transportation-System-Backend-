@@ -178,7 +178,8 @@ body{
 .pickup-location,
 .pickup-destination,
 .pickup-price,
-.pickup-contact
+.pickup-contact,
+.pickup-time
 {
     display: flex;
     align-items: center;
@@ -188,7 +189,8 @@ body{
 .pickup-text-location,
 .pickup-text-destination,
 .pickup-text-price,
-.pickup-text-contact
+.pickup-text-contact,
+.pickup-text-time
 {
     font-weight: bold;
     font-size: 12px;
@@ -203,6 +205,9 @@ body{
     font-size: 10px;
 }
 .value-contact{
+    font-size: 10px;
+}
+.value-time{
     font-size: 10px;
 }
 .pickup-driver{

@@ -101,7 +101,7 @@ body{
 }
 .new-ride-request-container{
     width: 500px;
-    height: 550px;
+    height: 650px;
     background-color: #fff;
     margin-left: auto;
     margin-right: auto;
@@ -140,7 +140,8 @@ body{
 }
 .pickup-location,
 .pickup-destination,
-.pickup-contact
+.pickup-contact,
+.pickup-time
 {
     display: flex;
     align-items: center;
@@ -149,7 +150,8 @@ body{
 }
 .pickup-text-location,
 .pickup-text-destination,
-.pickup-text-contact
+.pickup-text-contact,
+.pickup-text-time
 {
     font-weight: bold;
     font-size: 12px;
@@ -162,6 +164,9 @@ body{
     font-size: 10px;
 }
 .new-ride-value-contact{
+    font-size: 10px;
+}
+.new-ride-value-time{
     font-size: 10px;
 }
 .map-container{
