@@ -14,7 +14,8 @@ body{
     background-color: #fff;
     margin: 0;
 }
-.successfull-booking
+.successfull-booking,
+.accepted-booking
 {
     position: absolute;
     left: 50%;
@@ -63,7 +64,8 @@ body{
 .successfull-booking.hide,
 .cancel-booking.hide,
 .invalid-password.hide,
-.decline-booking.hide
+.decline-booking.hide,
+.accepted-booking.hide
 {
     display: none;
 }

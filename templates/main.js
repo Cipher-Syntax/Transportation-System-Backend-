@@ -3,7 +3,6 @@ setTimeout(() =>{
     successMessage.classList.add("hide");
 },2000);
 
-
 const cancelMessage = document.getElementById("cancel-booking");
 setTimeout(() =>{
     cancelMessage.classList.add("hide");
@@ -17,5 +16,10 @@ setTimeout(() =>{
 const declineMessage = document.getElementById("decline-booking");
 setTimeout(() =>{
     declineMessage.classList.add("hide");
+},2000);
+
+const acceptedMessage = document.getElementById("accepted-booking");
+setTimeout(() =>{
+    acceptedMessage.classList.add("hide");
 },2000);
 
