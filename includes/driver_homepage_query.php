@@ -5,6 +5,7 @@
     $driver_data = checkDriverLogin($conn);
 
     $driver_id = $driver_data['id'];
+    $_SESSION['driver_id'] = $driver_data['id'];
     
     $query = "SELECT r.*
     FROM rides r

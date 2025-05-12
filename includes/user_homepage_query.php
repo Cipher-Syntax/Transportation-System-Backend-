@@ -38,7 +38,8 @@
     }
 
     $user_id = $user_data['id'];
-    $sql = "SELECT ride_id, status, user_notified FROM rides WHERE passenger = ? ORDER BY ride_id DESC LIMIT 1";
+    $sql = "SELECT ride_id, status, user_notified, payment_confirmed FROM rides WHERE passenger = ? ORDER BY ride_id DESC LIMIT 1";
+
     $stmt = $conn->prepare($sql);
     $stmt->execute([$user_id]);
     $ride = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -57,6 +58,35 @@
         $stmtUpdate = $conn->prepare($update);
         $stmtUpdate->execute([$ride['ride_id']]);
     }
+
+    if($ride && $ride['status'] == "Active" && $ride['user_notified'] == 0){
+        // echo "<script>
+        //     window.onload = function(){
+        //         alert('Driver has accepted your request');
+        //     };
+        // </script>";
+        include("../templates/acceptedRequest.php");
+
+        $update = "UPDATE rides SET user_notified = 1 WHERE ride_id = ?";
+        $stmtUpdate = $conn->prepare($update);
+        $stmtUpdate->execute([$ride['ride_id']]);
+    }
+
+    // if($ride && $ride['status'] == "Completed" && $ride['user_notified'] == 1){
+    //     include("../templates/ratingForm.php");
+
+    //     $update = "UPDATE rides SET user_notified = 1 WHERE ride_id = ?";
+    //     $stmtUpdate = $conn->prepare($update);
+    //     $stmtUpdate->execute([$ride['ride_id']]);
+    // }
+    if ($ride && $ride['status'] == "Completed" && $ride['payment_confirmed'] == 0 && $ride['user_notified'] == 1) {
+        include("../templates/ratingForm.php");
+        
+        $update = "UPDATE rides SET payment_confirmed = 1 AND user_notified = 1 WHERE ride_id = ?";
+        $stmtUpdate = $conn->prepare($update);
+        $stmtUpdate->execute([$ride['ride_id']]);
+    }
+
 
     $user_id = $user_data['id'];
 
