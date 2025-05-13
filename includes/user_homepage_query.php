@@ -17,22 +17,12 @@
 
     if (isset($_SESSION['booking_success'])) {
         $message = $_SESSION['booking_success'];
-        // echo "<script>
-        //     window.onload = function() {
-        //         alert('$message');
-        //     };
-        // </script>";
         include("../templates/successfullBooking.php");
         unset($_SESSION['booking_success']);
     }
 
     if (isset($_SESSION['cancel_message'])) {
         $message = $_SESSION['cancel_message'];
-        // echo "<script>
-        //     window.onload = function() {
-        //         alert('$message');
-        //     };
-        // </script>";
         include("../templates/cancelBooking.php");
         unset($_SESSION['cancel_message']);
     }
@@ -45,11 +35,6 @@
     $ride = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($ride && $ride['status'] == 'Cancelled' && $ride['user_notified'] == 0) {
-        // echo "<script>
-        //     window.onload = function() {
-        //         alert('Rider declined your request');
-        //     };
-        // </script>";
         include("../templates/riderDeclinedRequest.php");
         
 
@@ -60,11 +45,6 @@
     }
 
     if($ride && $ride['status'] == "Active" && $ride['user_notified'] == 0){
-        // echo "<script>
-        //     window.onload = function(){
-        //         alert('Driver has accepted your request');
-        //     };
-        // </script>";
         include("../templates/acceptedRequest.php");
 
         $update = "UPDATE rides SET user_notified = 1 WHERE ride_id = ?";
@@ -72,13 +52,6 @@
         $stmtUpdate->execute([$ride['ride_id']]);
     }
 
-    // if($ride && $ride['status'] == "Completed" && $ride['user_notified'] == 1){
-    //     include("../templates/ratingForm.php");
-
-    //     $update = "UPDATE rides SET user_notified = 1 WHERE ride_id = ?";
-    //     $stmtUpdate = $conn->prepare($update);
-    //     $stmtUpdate->execute([$ride['ride_id']]);
-    // }
     if ($ride && $ride['status'] == "Completed" && $ride['payment_confirmed'] == 0 && $ride['user_notified'] == 1) {
         include("../templates/ratingForm.php");
         
