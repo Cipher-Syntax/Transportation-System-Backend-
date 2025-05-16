@@ -33,15 +33,15 @@
                 <h3>GoMove Developers</h3>
                 <div class="front-end">
                     <h4>Front End</h4>
-                    <a href="">Sahid, Aldrian M.</a> <br>
-                    <a href="">Lutian, Erzhad Dominic S.</a> <br>
-                    <a href="">Canones, Jenson L.</a> <br>
-                    <a href="">Jambre, Benedict C.</a> <br>
-                    <a href="">Sali, Rhadzmiel B.</a> <br>
+                    <a href="/Aldrian_Portfolio/ASSETS/PERSONAL PORTFOLIO.HTML">Sahid, Aldrian M.</a> <br>
+                    <a href="/Erzhad_Portfolio/index.php">Lutian, Erzhad Dominic S.</a> <br>
+                    <a href="/Canones_Portfolio/index.html">Canones, Jenson L.</a> <br>
+                    <a href="/Benedict_Portfolio/index.html">Jambre, Benedict C.</a> <br>
+                    <a href="/Rhadzmiel_Portfolio/index.html">Sali, Rhadzmiel B.</a> <br>
                 </div>
                 <div class="back-end">
                     <h4>Back End</h4>
-                    <a href="/Portfolio/pages/index.php">Toong, Justine A.</a> <br>
+                    <a href="/Personal_Portfolio/pages/index.php">Toong, Justine A.</a> <br>
                 </div>
             </div>
         </div>
