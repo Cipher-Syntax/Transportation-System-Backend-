@@ -115,7 +115,10 @@
 
                             <div class="password">
                                 <label for="password">Password</label>
-                                <input type="text" name="password" value="" id="password" >
+                                <div class="password-container">
+                                    <input type="text" name="password" value="" id="password" >
+                                    <button type="button" id="generate-password">Generate</button>
+                                </div>
                             </div>
                         </div>
 
@@ -183,5 +186,6 @@
         });
     </script>
 
+    <script src="../assets/js/add_driver.js"></script>
 </body>
 </html>
