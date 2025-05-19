@@ -109,15 +109,11 @@ table th{
 }
 .table-scroll{
     height: 350px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
 }
 tbody td{
     width: calc(100% / 7);
     padding-left: 10px;
-    font-size: 13px;
+    font-size: 10px;
 }
 tbody tr:nth-child(even){
     background-color: #e7e5e5;
@@ -129,16 +125,6 @@ tbody tr:nth-child(even){
     right: 450px;
     width: fit-content;
     font-size: 12px;
-}
-.pagination{
-    width: fit-content;
-    position: absolute;
-    bottom: 100px;
-    right: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 5px;
 }
 .box{
     width: 40px;
@@ -161,4 +147,35 @@ tbody tr:nth-child(even){
     background-color: var(--button) !important;
     color: var(--text);
 }
-
+.pagination{
+    width: fit-content;
+    position: absolute;
+    bottom: 100px;
+    right: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+.page-number{
+    width: fit-content;
+    position: absolute;
+    bottom: 70px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+.page-number a{
+    border: 1px solid #1E8449;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.active{
+    width: fit-content;
+    background-color: #1E8449;
+    color: #fff;
+}

@@ -89,10 +89,10 @@ body{
 }
 .table-scroll{
     height: 350px;
-    overflow-y: scroll;
+    /* overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: thin;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; */
 }
 table{
     width: 99%;
@@ -150,16 +150,6 @@ tbody tr:nth-child(even){
     width: fit-content;
     font-size: 12px;
 }
-.pagination{
-    width: fit-content;
-    position: absolute;
-    bottom: 100px;
-    right: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 5px;
-}
 .box{
     width: 40px;
     height: 30px;
@@ -196,4 +186,36 @@ tbody tr:nth-child(even){
 }
 #add-driver-btn:hover{
     background-color: #31b96a;
+}
+.pagination{
+    width: fit-content;
+    position: absolute;
+    bottom: 100px;
+    right: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+.page-number{
+    width: fit-content;
+    position: absolute;
+    bottom: 70px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+.page-number a{
+    border: 1px solid #1E8449;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.active{
+    width: fit-content;
+    background-color: #1E8449;
+    color: #fff;
 }

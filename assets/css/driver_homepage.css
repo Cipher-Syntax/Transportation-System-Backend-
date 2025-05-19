@@ -146,7 +146,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
 }
 .pickup-text-location,
 .pickup-text-destination,
@@ -155,6 +154,7 @@ body{
 {
     font-weight: bold;
     font-size: 12px;
+    width: 100px;
 }
 .new-ride-value-location{
     font-size: 10px;
@@ -247,7 +247,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
 }
 .pickup-text-location,
 .pickup-text-destination,
@@ -255,6 +254,7 @@ body{
 {
     font-weight: bold;
     font-size: 12px;
+    width: 100px;
 }
 .current-ride-value-location{
     font-size: 10px;
@@ -407,7 +407,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
 }
 .pickup-text-location,
 .pickup-text-destination,
@@ -415,6 +414,7 @@ body{
 {
     font-weight: bold;
     font-size: 12px;
+    width: 100px;
 }
 .history-ride-value-location{
     font-size: 10px;
