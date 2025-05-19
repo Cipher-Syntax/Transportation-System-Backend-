@@ -16,6 +16,34 @@
     $count_stmt->execute();
     $count_result = $count_stmt->fetch(PDO::FETCH_ASSOC);
 
+    $start_page = 0;
+    $rows_per_page = 5;
+
+    $records = "SELECT *FROM drivers";
+    $stmt = $conn->prepare($records);
+    $stmt->execute();
+    $num_of_rows = $stmt->fetchAll();
+    $rows = COUNT($num_of_rows);
+    $pages = ceil($rows / $rows_per_page);
+
+    if(isset($_GET['page-num-row'])){
+        $page = $_GET['page-num-row'] - 1;
+        $start_page = $page * $rows_per_page;
+    }
+    
+    // $query = "SELECT * FROM drivers LIMIT $start_page, $rows_per_page";
+    // $stmt = $conn->prepare($query);
+    // $stmt->execute();
+    // $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if(isset($_GET['page-num-row'])){
+        $page_id = $_GET['page-num-row'];
+    }
+    else{
+        $page_id = 1;
+    }
+
+
     $query = "SELECT 
         rides.ride_id, 
         users.firstname AS user_firstname, 
@@ -29,6 +57,7 @@
         FROM rides 
         JOIN users ON users.id = rides.passenger 
         JOIN drivers ON drivers.id = rides.driver
+        LIMIT $start_page, $rows_per_page
     ";
     
     $stmt = $conn->prepare($query);
@@ -126,6 +155,71 @@
                     
                     </table>
                 </div>
+                
+                <div class="pagination">
+                    <?php
+                        if(!isset($_GET['page-num-row'])){
+                            $page = 1;
+                        }
+                        else{
+                            $page = $_GET['page-num-row'];
+                        }
+                    ?>
+                    <p>Showing <?php echo $page?> to <?php echo $pages?> pages</p>
+                </div>
+                <div class="page-number">
+                    <!-- FIRST BUTTON -->
+                    <a href="?page-num-row=1">First</a>
+
+                    <!-- PREVIOUS BUTTON -->
+                    <?php
+                        if(isset($_GET['page-num-row']) && $_GET['page-num-row'] > 1){
+                            ?> <a href="?page-num-row=<?php echo $_GET['page-num-row'] - 1; ?>">Previous</a> <?php
+                        }
+                        else{
+                            ?> <a href="">Previous</a> <?php
+                        }
+                    ?>
+                    
+                    <!-- PAGE NUMBERS -->
+                    <?php
+
+                        $current_page = isset($_GET['page-num-row']) ? (int)$_GET['page-num-row'] : 1;
+                        $max_links = 5;
+                        $start = floor(($current_page - 1) / $max_links) * $max_links + 1;
+                        $end = min($start + $max_links - 1, $pages);
+
+                        for($counter = $start; $counter <= $end; $counter++){
+                            ?>
+                                <a href="?page-num-row=<?php echo $counter ?>" class="page-num"><?php echo $counter ?></a>
+                            <?php
+                        }
+                    ?> 
+
+                    <!-- <a href="" class="page-num">1</a>
+                    <a href="" class="page-num">2</a>
+                    <a href="" class="page-num">3</a>
+                    <a href="" class="page-num">4</a>
+                    <a href="" class="page-num">5</a> -->
+
+                    <!-- NEXT BUTTON -->
+                    <?php
+                        if(!isset($_GET['page-num-row'])){
+                            ?> <a href="?page-num-row=2" class="page-num">Next</a> <?php
+                        }
+                        else{
+                            if($_GET['page-num-row'] >= $pages){
+                                ?> <a href="">Next</a> <?php
+                            }
+                            else{
+                                ?> <a href="?page-num-row=<?php echo $_GET['page-num-row'] + 1 ?>">Next</a> <?php
+                            }
+                        }
+                    ?>
+
+                    <!-- LAST BUTTON -->
+                    <a href="?page-num-row= <?php echo $pages?>">Last</a>
+                </div>    
 
                 <!-- <p class="total-rides">Showing 1 - 5 of 100 rides</p>
                 <div class="pagination">
